@@ -2,6 +2,7 @@
     include_once("templates/header.php");
 ?>
     <div class="container">
+    <p class="msg">Testando mensagem!</p>
         <?php if(isset($printMsg) && $printMsg != ''):?>
             <p class="msg"><?= $printMsg;?></p>
         <?php endif;?>
@@ -19,14 +20,14 @@
                 <tbody>
                     <?php foreach($contacts as $contact):?>
                         <tr>
-                            <td scopr="row"><?=$contact["id"]?></td>
+                            <td scopr="row" class="col-id"><?=$contact["id"]?></td>
                             <td scopr="row"><?=$contact["name"]?></td>
                             <td scopr="row"><?=$contact["phone"]?></td>
-                            <td scopr="row"><?=$contact["observations"]?></td>
+                            <!-- <td scopr="row"><?=$contact["observations"]?></td> -->
                             <td class="actions">
                                 <a href="#"><i class="fas fa-eye check-icon"></i></a>
                                 <a href="#"><i class="far fa-edit edit-icon"></i></a>
-                                <button type="submit"><i class="fas fa-times delete-icon"></i></button>
+                                <button type="submit" class="delete-btn"><i class="fas fa-times delete-icon"></i></button>
                             </td>
                         </tr>
                     <?php endforeach;?>
