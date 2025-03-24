@@ -1,6 +1,6 @@
-/* .navbar-brand img {
+.navbar-brand img {
     width: 50px;
-} */
+}
 
 #main-title {
     text-align: center;
@@ -10,7 +10,7 @@
 
 /* HOME */
 
-#contacts-table {
+.contacts-table {
     max-width: 800px;
     margin: 0 auto;
 }
@@ -31,10 +31,12 @@
 
 .check-icon {
     color: #1E7E34;
+    margin-right: 20px;
 }
 
 .edit-icon {
     color: #007BFF;
+    margin-right: 15px;
 }
 
 .delete-btn {
@@ -47,7 +49,7 @@
     color: #BD2130;
 }
 
-#contacts-table thead {
+.contacts-table thead {
     color: #FFF;
     background-color: #007BFF;
 }
@@ -56,7 +58,7 @@
     text-align: center;
 }
 
-#msg {
+.msg {
     color: #155724;
     background-color: #D4EDDA;
     border: 1px sollid #C3E6CB;
@@ -65,4 +67,28 @@
     max-width: 500px;
     margin: 0 auto;
     margin-top: 30px;
+}
+
+/* SHOW / CONTATO INDIVIDUAL */
+#view-contact-container {
+    max-width: 500px;
+    margin: o auto;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+#back-link-container {
+    display: block;
+    width: 500px;
+    margin: 30px auto 0;
+}
+
+#back-link {
+    border: 1px solid #007BFF;
+    color: #007BFF;
+    border-radius: 4px;
+    padding: 5px;
+    text-decoration: none;
 }
