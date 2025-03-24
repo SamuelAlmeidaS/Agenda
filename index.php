@@ -2,13 +2,12 @@
     include_once("templates/header.php");
 ?>
     <div class="container">
-    <p class="msg">Testando mensagem!</p>
         <?php if(isset($printMsg) && $printMsg != ''):?>
             <p class="msg"><?= $printMsg;?></p>
         <?php endif;?>
         <h1 id="main-title">Minha Agenda</h1>
         <?php if(count($contacts) > 0):?>
-            <table class="table" id="contacts-table">
+            <table class="table contacts-table" >
                 <thead>
                     <tr>
                         <th scope="col">#</th>
@@ -25,7 +24,7 @@
                             <td scopr="row"><?=$contact["phone"]?></td>
                             <!-- <td scopr="row"><?=$contact["observations"]?></td> -->
                             <td class="actions">
-                                <a href="#"><i class="fas fa-eye check-icon"></i></a>
+                                <a href="<?=$BASE_URL?>show.php?id=<?=$contact["id"]?>"><i class="fas fa-eye check-icon"></i></a>
                                 <a href="#"><i class="far fa-edit edit-icon"></i></a>
                                 <button type="submit" class="delete-btn"><i class="fas fa-times delete-icon"></i></button>
                             </td>
