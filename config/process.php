@@ -24,16 +24,44 @@
           $stmt->bindParam(":phone", $phone);
           $stmt->bindParam(":observation", $observations);
 
-        try {
+            try {
 
-            $stmt->execute();
-            $_SESSION["msg"] = "Contato criado com sucesso!";
-        
-        } catch(PDOException $e){
-            // Erro na conexão
-            $erro = $e->getMessage();
-            echo "Erro: $erro";
-        }
+                $stmt->execute();
+                $_SESSION["msg"] = "Contato criado com sucesso!";
+            
+            } catch(PDOException $e){
+                // Erro na conexão
+                $erro = $e->getMessage();
+                echo "Erro: $erro";
+            }
+        } else if($data["type"] === "edit"){
+
+            $name = $data["name"];
+            $phone = $data["phone"];
+            $observation = $data["observation"];
+            $id = $data["id"];
+
+            $query = "UPDATE contacts 
+                      SET name = :name, phone = :phone, Observation = :observation 
+                      WHERE id = :id";
+
+            $stmt = $conn->prepare($query);
+
+            $stmt->bindParam(":name", $name);
+            $stmt->bindParam(":phone", $phone);
+            $stmt->bindParam(":observation", $observation);
+            $stmt->bindParam(":id", $id);
+
+            try {
+
+                $stmt->execute();
+                $_SESSION["msg"] = "Contato atualizado com sucesso!";
+            
+            } catch(PDOException $e){
+                // Erro na conexão
+                $erro = $e->getMessage();
+                echo "Erro: $erro";
+            }
         }
 
         //Redirect HOME
