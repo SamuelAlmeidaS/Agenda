@@ -103,3 +103,13 @@
 #create-form div {
     margin-bottom: 10px;
 }
+
+
+/* MOBILE */
+
+@media(max-width: 480px){
+    
+    #home-link {
+        display: none;
+    }
+}
