@@ -39,6 +39,10 @@
     margin-right: 15px;
 }
 
+.delete-form {
+    display: inline-block;
+}
+
 .delete-btn {
     background-color: transparent;
     border: none;
@@ -105,10 +109,11 @@
 }
 
 
+
 /* MOBILE */
 
 @media(max-width: 480px){
-    
+
     #home-link {
         display: none;
     }
